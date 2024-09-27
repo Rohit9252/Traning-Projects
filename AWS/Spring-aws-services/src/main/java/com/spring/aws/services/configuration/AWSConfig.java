@@ -56,7 +56,7 @@ public class AWSConfig {
     @Primary
     public AmazonSQSAsync amazonSqs() {
         return AmazonSQSAsyncClientBuilder.standard()
-                .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration("http://localhost:8888", region))
+                .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration("http://localhost:8088", region))
                 .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKey, secretKey)))
                 .build();
     }
