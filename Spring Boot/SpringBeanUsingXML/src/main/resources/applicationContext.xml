@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--    <bean id="c" class="dependency.Car"/>-->
+<!--    <bean id="b" class="dependency.Bike"/>-->
+
+
+<!--&lt;!&ndash;    this is for setter injection&ndash;&gt;-->
+<!--&lt;!&ndash;    <bean id="t" class="dependency.Travel">&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <property name="v" ref="c"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="numberOFPerson" value="50"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    </bean>&ndash;&gt;-->
+
+<!--    &lt;!&ndash;    this is for constructor  injection&ndash;&gt;-->
+<!--    <bean id="t" class="dependency.Travel">-->
+
+<!--        <constructor-arg ref="b"/>-->
+<!--        <constructor-arg value="2"/>-->
+
+<!--    </bean>-->
+
+
+<!--     for circular dependency-->
+<!--    <bean id="a" class="circulardependency.A">-->
+<!--        <property name="b1" ref="b"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="b" class="circulardependency.B">-->
+<!--        <constructor-arg ref="a"/>-->
+<!--    </bean>-->
+
+
+
+<!--     this is for Auto wiring  by name-->
+
+
+<!--    <bean id="dao" class="autowiring.DAOBean" />-->
+
+
+<!--    <bean id="service" class="autowiring.ServiceBean" autowire="byName" />-->
+
+
+
+<!--    <bean id="pb" class="autowiring.PresentationBean" autowire="byName" />-->
+
+
+    <!--     this is for Auto wiring  by type-->
+
+
+<!--        <bean id="db" class="autowiring.DAOBean" />-->
+
+
+<!--        <bean id="sb" class="autowiring.ServiceBean" autowire="byType" />-->
+
+
+
+<!--        <bean id="pb" class="autowiring.PresentationBean" autowire="byType" />-->
+
+
+
+    <!--     this is for Auto wiring  by type ambiguity -->
+
+
+<!--            <bean id="db" class="autowiring.DAOBean" />-->
+
+<!--            <bean id="db2" class="autowiring.DAOBean" />-->
+
+<!--            <bean id="sb" class="autowiring.ServiceBean" autowire="byType" />-->
+
+
+
+<!--            <bean id="pb" class="autowiring.PresentationBean" autowire="byType" />-->
+
+
+
+    <!--     this is for Auto wiring   by constructor -->
+
+    <!--    <bean id="d1" class="autowiring.Demo" autowire="constructor" />-->
+
+    <!--    <bean id="a1" class="autowiring.A"  />-->
+    <!--    <bean id="a2" class="autowiring.A"  />-->
+    <!--    <bean id="b" class="autowiring.B"  />-->
+
+
+<!--  initializing and Disposing a Bean   -->
+
+
+
+
+    <bean id="a1" class="initializingdisposing.A"  scope="prototype"  >
+        <property name="message" value="Welcome to Spring.."/>
+    </bean>
+
+
+
+</beans>
