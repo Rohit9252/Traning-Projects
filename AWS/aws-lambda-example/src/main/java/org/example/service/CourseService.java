@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class CourseService {
@@ -14,6 +15,7 @@ public class CourseService {
 
     // Create a new course
     public void addCourse(Course course) {
+        course.setId(UUID.randomUUID().hashCode());
         courses.add(course);
     }
 
