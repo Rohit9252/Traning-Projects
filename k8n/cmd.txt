@@ -1,0 +1,5 @@
+kubectl get pods  -- to get all pods running
+kubectl get replicaset   -- to get all the replicaset
+kubectl get deployment   -- to ger all the deployment
+kubectl describe pod <pod name> to get detail view of the pod 
+kubectl apply -f deployment-definition-1.yaml   to apply file changes to pods
